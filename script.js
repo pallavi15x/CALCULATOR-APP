@@ -27,8 +27,13 @@ function calculate() {
 
 function toggleTheme() {
     document.body.classList.toggle("light");
-    document.getElementById("themeBtn").innerText =
-        document.body.classList.contains("light") ? "☀️" : "🌙";
+
+    let btn = document.getElementById("themeBtn");
+    if(document.body.classList.contains("light")) {
+        btn.innerText = "☀️"; // sun emoji for light mode
+    } else {
+        btn.innerText = "🌙"; // moon emoji for dark mode
+    }
 }
 
 document.addEventListener("keydown", (e) => {
