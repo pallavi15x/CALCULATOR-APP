@@ -151,61 +151,23 @@ button:active {
 }
 
 /* RESPONSIVE */
-/* @media (max-width: 500px) {
+@media (max-width: 500px) {
         .title {
         margin-bottom: 5px; /* very small gap */
-        /* font-size: 22px;
-    } */
-    /* .calculator {
+        font-size: 22px;
+    }
+    .calculator {
         width: 95%;
         font-size: 18px;
          padding: 16px;
-    } */
-
-    /* button {
-        padding: 12px;
-        font-size: 14px;
-    } */
-
-    /* .display {
-        font-size: 18px;
-    }
-} */ 
-
-/* MOBILE CALCULATOR STYLE */
-@media (max-width: 500px) {
-    /* Optional: hide the title to save space */
-    .title {
-        display: none;
-    }
-
-    /* Make calculator take most of screen width */
-    .calculator {
-        width: 95vw;          /* almost full width */
-        max-width: 400px;     /* keeps it reasonable on larger phones */
-        padding: 10px;
-        border-radius: 20px;  /* keep rounded corners for nice look */
-    }
-
-    /* Display area bigger */
-    .display {
-        height: 80px;
-        font-size: 28px;
-        padding: 15px;
-    }
-
-    /* Make buttons bigger and touch-friendly */
-    .buttons {
-        gap: 8px;
     }
 
     button {
-        font-size: 22px;
-        padding: 20px 0;
+        padding: 12px;
+        font-size: 14px;
     }
 
-    /* Make zero button span two columns */
-    .zero {
-        grid-column: span 2;
+    .display {
+        font-size: 18px;
     }
 }
