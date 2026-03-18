@@ -56,3 +56,16 @@ document.addEventListener("keydown", (e) => {
         clearDisplay();
     }
 });
+function square() {
+    if(display.value !== "") {
+        display.value = Math.pow(eval(display.value), 2);
+        history.innerText = "squared";
+    }
+}
+
+function cube() {
+    if(display.value !== "") {
+        display.value = Math.pow(eval(display.value), 3);
+        history.innerText = "cubed";
+    }
+}
