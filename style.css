@@ -13,14 +13,13 @@ body {
     justify-content: center;
     background: linear-gradient(135deg, #0f172a, #020617);
     color: #e2e8f0;
-    transition: background 0.3s, color 0.3s;
 }
 
 /* Title */
 .title {
-    margin-bottom: 20px; /* smaller gap */
+    margin-bottom: 20px;
     font-size: 26px;
-    text-align: center; /* optional, center the title */
+    text-align: center;
 }
 
 /* Calculator */
@@ -33,9 +32,9 @@ body {
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255,255,255,0.08);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.6),
-                inset 0 0 10px rgba(255,255,255,0.05);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6), inset 0 0 10px rgba(255,255,255,0.05);
 }
+
 .calculator::before {
     content: "";
     height: 3px;
@@ -54,7 +53,7 @@ body {
     border: none;
     outline: none;
     border-radius: 10px;
-      box-shadow: inset 0 -2px 10px rgba(0,0,0,0.3);
+    box-shadow: inset 0 -2px 10px rgba(0,0,0,0.3);
     padding: 10px;
     font-size: 24px;
     text-align: right;
@@ -82,22 +81,17 @@ button {
     font-size: 16px;
     border: none;
     border-radius: 10px;
-   background: rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.05);
     color: #e2e8f0;
     cursor: pointer;
     transition: 0.2s;
 }
-button:active {
-    transform: scale(0.95);
-    box-shadow: 0 0 5px rgba(255,255,255,0.3);
-}
 
 button:hover {
     transform: translateY(-2px);
-    box-shadow: 
-        0 0 10px rgba(59,130,246,0.4),
-        0 0 20px rgba(59,130,246,0.2);
+    box-shadow: 0 0 10px rgba(59,130,246,0.4), 0 0 20px rgba(59,130,246,0.2);
 }
+
 button:active {
     transform: scale(0.9);
 }
@@ -107,21 +101,17 @@ button:active {
     color: white;
 }
 
-/* Special */
-
 .op {
-      background: linear-gradient(135deg, #3b82f6, #2563eb);
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
     color: white;
 }
-
 
 .zero {
     grid-column: span 2;
 }
 
 .equal {
-     grid-column: span 1;
-        background: linear-gradient(135deg, #22c55e, #16a34a);
+    background: linear-gradient(135deg, #22c55e, #16a34a);
     color: white;
 }
 
@@ -152,28 +142,20 @@ button:active {
     color: black;
 }
 
-/* RESPONSIVE */
+/* Responsive Mobile */
 @media (max-width: 500px) {
     .title {
         margin-bottom: 5px;
         font-size: 22px;
-        text-align: center;
     }
-
-    /* Mobile calculator */
     .calculator {
-        width: 95%;       /* almost full screen width */
-        max-width: none;  /* allow full width */
+        width: 95%;
         padding: 15px;
-        margin: auto;
-        border-radius: 20px; /* keep rounded corners */
     }
-
     .display {
         height: 70px;
         font-size: 24px;
     }
-
     button {
         padding: 18px 0;
         font-size: 20px;
