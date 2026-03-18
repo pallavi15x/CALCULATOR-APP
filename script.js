@@ -43,15 +43,7 @@ function toggleTheme() {
     let btn = document.getElementById("themeBtn");
     btn.innerText = document.body.classList.contains("light") ? "☀️" : "🌙";
 }
-function toggleSign() {
-    if (display.value) {
-        if (display.value.startsWith('-')) {
-            display.value = display.value.slice(1);
-        } else {
-            display.value = '-' + display.value;
-        }
-    }
-}
+
 
 /* Keyboard support */
 document.addEventListener("keydown", (e) => {
