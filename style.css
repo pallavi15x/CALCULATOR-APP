@@ -23,8 +23,11 @@ body {
 
 /* Calculator */
 .calculator {
-    width: 320px;
+    width: 90%;
     padding: 20px;
+    max-width: 400px;
+    margin: auto;
+
     border-radius: 20px;
 
     background: rgba(255, 255, 255, 0.04);
