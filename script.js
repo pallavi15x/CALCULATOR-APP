@@ -56,3 +56,67 @@ document.addEventListener("keydown", (e) => {
         clearDisplay();
     }
 });
+
+function square(num = display.value) {
+    if(num !== "") display.value = Math.pow(eval(num), 2);
+}
+
+function cube(num = display.value) {
+    if(num !== "") display.value = Math.pow(eval(num), 3);
+}
+
+function sqrt(num = display.value) {
+    if(num !== "") display.value = Math.sqrt(eval(num));
+}
+function factorial(n = display.value) {
+    n = Number(n);
+    if(n < 0) return display.value = "Error";
+    let result = 1;
+    for(let i=2; i<=n; i++) result *= i;
+    display.value = result;
+}
+function power(exponent) {
+    let base = eval(display.value);
+    if(exponent != null) display.value = Math.pow(base, Number(exponent));
+}
+let exp = prompt("Enter exponent:");
+power(exp);
+function sinDeg() {
+    display.value = Math.sin(eval(display.value) * Math.PI / 180);
+}
+
+function cosDeg() {
+    display.value = Math.cos(eval(display.value) * Math.PI / 180);
+}
+
+function tanDeg() {
+    display.value = Math.tan(eval(display.value) * Math.PI / 180);
+}
+function runAdvanced(func) {
+    switch(func) {
+        case "square": square(); break;
+        case "cube": cube(); break;
+        case "sqrt": sqrt(); break;
+        case "factorial": factorial(); break;
+        case "sin": sinDeg(); break;
+        case "cos": cosDeg(); break;
+        case "tan": tanDeg(); break;
+    }
+}
+let historyList = [];
+
+function calculate() {
+    try {
+        let result = eval(display.value);
+        if(result === Infinity) display.value = "Cannot divide by 0";
+        else {
+            historyList.unshift(display.value + " = " + result);
+            if(historyList.length > 5) historyList.pop();
+            history.innerText = historyList.join("\n");
+            display.value = result;
+        }
+    } catch {
+        display.value = "Error";
+    }
+}
+display.value = parseFloat(result.toFixed(6));
