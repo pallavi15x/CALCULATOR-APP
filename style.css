@@ -17,18 +17,14 @@ body {
 
 /* Title */
 .title {
-    margin-bottom: 20px; /* smaller gap */
+    margin-bottom: 20px;
     font-size: 26px;
-    text-align: center; /* optional, center the title */
 }
 
 /* Calculator */
 .calculator {
     width: 320px;
     padding: 20px;
-    max-width: 400px;
-    margin: auto;
-
     border-radius: 20px;
 
     background: rgba(255, 255, 255, 0.04);
@@ -152,22 +148,20 @@ button:active {
 
 /* RESPONSIVE */
 @media (max-width: 500px) {
-        .title {
-        margin-bottom: 5px; /* very small gap */
-        font-size: 22px;
-    }
     .calculator {
         width: 95%;
-        font-size: 18px;
-         padding: 16px;
     }
 
     button {
-        padding: 12px;
-        font-size: 14px;
+        padding: 16px;
+        font-size: 18px;
     }
 
     .display {
         font-size: 18px;
     }
+    .calculator {
+    width: 90%; /* or 95% for full-screen feel */
+    max-width: 400px; /* keeps it reasonable on large screens */
+}
 }
