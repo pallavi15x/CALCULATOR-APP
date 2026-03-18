@@ -1,5 +1,3 @@
-
-
 * {
     margin: 0;
     padding: 0;
@@ -15,173 +13,143 @@ body {
     justify-content: center;
     background: linear-gradient(135deg, #0f172a, #020617);
     color: #e2e8f0;
-    transition: background 0.3s, color 0.3s;
 }
 
-/* Title */
 .title {
-    margin-bottom: 20px; /* smaller gap */
-    font-size: 26px;
-    text-align: center; /* optional, center the title */
+    margin-bottom: 15px;
+    font-size: 28px;
+    text-align: center;
+    color: #f8fafc;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
-/* Calculator */
 .calculator {
-    width: 320px;
+    width: 90%;
     max-width: 400px;
-    padding: 20px;
-    margin: auto;
+    padding: 25px;
     border-radius: 30px;
-     background: linear-gradient(145deg, #1e293b, #0f172a);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.08);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.6),
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5),
                 inset 0 0 10px rgba(255,255,255,0.05);
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .calculator::before {
     content: "";
-    height: 3px;
     width: 100%;
+    height: 4px;
     display: block;
-    background: linear-gradient(90deg, #00ffa3, #00c9ff);
+    margin-bottom: 15px;
     border-radius: 10px;
-    margin-bottom: 10px;
+    background: linear-gradient(90deg, #00ffa3, #00c9ff);
 }
 
-/* Display */
 .display {
     width: 100%;
-    height: 60px;
-    margin-bottom: 10px;
-    border: none;
-    outline: none;
+    height: 70px;
+    margin-bottom: 15px;
     border-radius: 20px;
-      box-shadow: inset 0 -2px 10px rgba(0,0,0,0.3);
     padding: 15px;
-    font-size: 24px;
+    font-size: 28px;
     text-align: right;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
     color: #f8fafc;
+    box-shadow: inset 0 -2px 8px rgba(0,0,0,0.5);
 }
 
-/* History */
 .history {
     text-align: right;
-    font-size: 13px;
+    font-size: 14px;
     color: #aaa;
-    min-height: 20px;
+    min-height: 22px;
+    margin-bottom: 10px;
 }
 
-/* Buttons */
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 12px;
+    width: 100%;
 }
 
 button {
-    border-radius: 50%; 
-    padding: 18px;
-    font-size: 18px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     border: none;
-    border-radius: 10px;
-   background: rgba(255,255,255,0.05);
+    background: #0f172a;
     color: #e2e8f0;
+    font-size: 18px;
     cursor: pointer;
     transition: 0.2s;
-}
-button:active {
-    transform: scale(0.95);
-    box-shadow: 0 0 5px rgba(255,255,255,0.3);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6),
+                -5px -5px 15px rgba(255,255,255,0.1);
 }
 
 button:hover {
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 15px rgba(255,255,255,0.2),
+                0 0 20px rgba(0,0,0,0.3);
 }
 
 button:active {
     transform: scale(0.95);
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+    box-shadow: inset 5px 5px 15px rgba(0,0,0,0.6),
+                inset -5px -5px 15px rgba(255,255,255,0.1);
+}
+
+.zero {
+    grid-column: span 2;
+    border-radius: 35px;
+}
+
+.op {
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    color: white;
+    border-radius: 50%;
+}
+
+.equal {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    border-radius: 50%;
 }
 
 #themeBtn {
     background: linear-gradient(135deg, #64748b, #334155);
     color: white;
+    border-radius: 50%;
 }
 
-/* Special */
-
-.op {
-      background: linear-gradient(135deg, #3b82f6, #2563eb);
-    color: white;
-     border-radius: 50%;
-}
-
-
-.zero {
-    grid-column: span 2;
-     border-radius: 35px;
-}
-
-.equal {
-     grid-column: span 1;
-        background: linear-gradient(135deg, #22c55e, #16a34a);
-    color: white;
-     border-radius: 50%;
-}
-
-/* Footer */
 .footer {
     margin-top: 15px;
     font-size: 12px;
     color: #aaa;
+    text-align: center;
 }
 
-/* LIGHT MODE */
-.light {
-    background: #f1f5f9;
-    color: #0f172a;
-}
 
-.light .calculator {
-    background: white;
-}
-
-.light .display {
-    background: #e2e8f0;
-    color: black;
-}
-
-.light button {
-    background: #e5e7eb;
-    color: black;
-}
-
-/* RESPONSIVE */
 @media (max-width: 500px) {
     .title {
-        margin-bottom: 5px;
-        font-size: 22px;
-        text-align: center;
-    }
-
-    /* Mobile calculator */
-    .calculator {
-        width: 95%;       /* almost full screen width */
-        max-width: none;  /* allow full width */
-        padding: 15px;
-        margin: auto;
-        border-radius: 20px; /* keep rounded corners */
-    }
-
-    .display {
-        height: 70px;
         font-size: 24px;
+        margin-bottom: 8px;
     }
-
+    .display {
+        font-size: 22px;
+        height: 60px;
+    }
     button {
-        padding: 18px 0;
-        font-size: 20px;
+        width: 55px;
+        height: 55px;
+        font-size: 16px;
+    }
+    .zero {
+        grid-column: span 2;
     }
 }
